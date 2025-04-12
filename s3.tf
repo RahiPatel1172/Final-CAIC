@@ -6,7 +6,6 @@ resource "aws_s3_bucket" "terraform_state" {
   force_destroy = false
 
   lifecycle {
-    prevent_destroy = true
     ignore_changes  = all
   }
 
@@ -35,7 +34,6 @@ resource "aws_dynamodb_table" "terraform_lock" {
   hash_key       = "LockID"
 
   lifecycle {
-    prevent_destroy = true
     ignore_changes  = all
   }
 

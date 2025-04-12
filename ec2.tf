@@ -70,7 +70,7 @@ resource "aws_key_pair" "deployer" {
 # Save private key locally
 resource "local_file" "ssh_key" {
   content         = tls_private_key.pk.private_key_pem
-  filename        = "rp-key-pair.pem"
+  filename        = "keys/rp-key-pair.pem" 
   file_permission = "0600"
 }
 

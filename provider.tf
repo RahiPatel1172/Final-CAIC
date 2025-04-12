@@ -27,3 +27,12 @@ terraform {
 provider "aws" {
   region = var.region
 }
+
+# Metadata
+locals {
+  project_name    = "PROG8870-RahiPatel"
+  student_name    = "Rahi Patel"
+  student_id      = "8975566"
+  creation_date   = "2025-04-05"
+  environment     = "Dev"
+}
